@@ -5,6 +5,7 @@ data = np.random.randint(0,2,10**7)
 x = list()
 
 # 배열 ‘data’의 첫 30개 값은 무엇인가?
+print("data")
 for i in range(30):
     print("{}".format(data[i]), end=" ")
 print()
@@ -16,6 +17,7 @@ for i in range(10**7):
         x.append(-1)
 
 # 배열 ‘x’의 첫 30개 값은 무엇인가?
+print("x")
 for i in range(30):
     print("{}".format(x[i]), end=" ")
 print()
@@ -24,6 +26,7 @@ print()
 n = np.round(np.random.normal(0, 1, 10**7), 4)
 
 # 배열 ‘n’의 첫 30개 값은 무엇인가? 소수점 아래 4자리까지
+print("n")
 for i in range(30):
     print("{}".format(n[i]), end=" ")
 print()
@@ -34,6 +37,7 @@ for i in range(10**7):
     r.append(n[i]+x[i])
 
 # 배열 ‘r’의 첫 30개 값은 무엇인가? 소수점 아래 4자리까지
+print("r")
 for i in range(30):
     print("{}".format(r[i]), end=" ")
 print()
@@ -47,6 +51,7 @@ for i in range(10**7):
         y.append(0)
 
 # 배열 ‘y’의 첫 30개 값은 무엇인가?
+print("y")
 for i in range(30):
     print("{}".format(y[i]), end=" ")
 print()
@@ -60,12 +65,13 @@ for i in range(10**7):
     check.append(success)
 
 # 배열 ‘check’의 첫 30개 값은 무엇인가?
+print("check")
 for i in range(30):
     print("{}".format(check[i]), end=" ")
 print()
 
 # 전체 10^7개 데이터 중, 수신기가 바르게 복조한 비트의 개수는 무엇인가?
-print(success)
+print("올바른 개수 : ",success)
 
 # 에러 확률은 무엇인가?
-print(((10**7)-success)/(10**7))
+print("에러 확률 : ",(((10**7)-success)/(10**7))*100, "%")
