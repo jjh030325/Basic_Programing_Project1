@@ -75,3 +75,29 @@ print("올바른 개수 : ",success)
 
 # 에러 확률은 무엇인가?
 print("에러 확률 : ",(((10**7)-success)/(10**7))*100, "%")
+
+
+
+#표준편차 0.1에서 2.9까지 에러확률
+for index in np.arange(0.1, 3.0, 0.1):
+    n = np.round(np.random.normal(0, index, 10**7), 4)
+
+    r = list()
+    for i in range(10**7):
+        r.append(n[i]+x[i])
+
+    y = list()
+    for i in range(10**7):
+        if(r[i]>=0):
+            y.append(1)
+        else:
+            y.append(0)
+
+    check = list()
+    success = 0
+    for i in range(10**7):
+        if(y[i]==data[i]):
+            success+=1
+        check.append(success)
+    
+    print("{:.1f}에러 확률 : {:.6f}%".format(index, ((10**7)-success)/(10**7)*100))
