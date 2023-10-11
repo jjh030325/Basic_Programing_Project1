@@ -28,7 +28,7 @@ n = np.round(np.random.normal(0, 1, 10**7), 4)
 # 배열 ‘n’의 첫 30개 값은 무엇인가? 소수점 아래 4자리까지
 print("n")
 for i in range(30):
-    print("{}".format(n[i]), end=" ")
+    print("{:.4f}".format(n[i]), end=" ")
 print()
 
 # 수신기가 받은 신호는 변조된 데이터와 잡음의 합으로 계산할 수 있다. 수신 신호를 배열 ‘r’에 저장한다.
@@ -39,7 +39,7 @@ for i in range(10**7):
 # 배열 ‘r’의 첫 30개 값은 무엇인가? 소수점 아래 4자리까지
 print("r")
 for i in range(30):
-    print("{}".format(r[i]), end=" ")
+    print("{:.4f}".format(r[i]), end=" ")
 print()
 
 # 수신 신호가 0보다 크거나 같으면 1, 0보다 작으면 0으로 결정하고, 그 결과를 배열 ‘y’에 저장한다.
@@ -74,7 +74,7 @@ print()
 print("올바른 개수 : ",success)
 
 # 에러 확률은 무엇인가?
-print("에러 확률 : ",(((10**7)-success)/(10**7))*100, "%")
+print("에러 확률 : {:.6f}".format((((10**7)-success)/(10**7))*100), "%")
 
 
 
